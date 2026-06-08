@@ -1,0 +1,38 @@
+@media print {
+  body {
+    background: #fff;
+    display: block;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  #tela-revisao {
+    display: block !important;
+    max-height: none;
+    overflow: visible;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  #tela-revisao * {
+    color: #000 !important;
+    background: #fff !important;
+    border-color: #ccc !important;
+  }
+
+  .revisao-item.acertou .revisao-resp.correta {
+    background: #e8ffe8 !important;
+  }
+
+  .revisao-item.errou .revisao-resp.errada {
+    background: #ffe8e8 !important;
+  }
+
+  .screen:not(#tela-revisao) {
+    display: none !important;
+  }
+}
