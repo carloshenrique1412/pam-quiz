@@ -1,0 +1,69 @@
+#tela-config {
+  width: 480px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+#tela-config::before {
+  content: "★ SELECT MODE ★";
+  display: block;
+  font-size: .45rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  opacity: .7;
+}
+
+.config-titulo {
+  font-size: .85rem;
+  color: var(--gold);
+  line-height: 1.8;
+  text-shadow: 2px 2px 0 #000, 0 0 20px #f0c06088;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.config-opcoes {
+  margin-top: 24px;
+}
+
+.opcoes-titulo {
+  font-size: .5rem;
+  color: var(--accent-bright);
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.categoria-opcoes {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.categoria-opcao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.categoria-opcao .material-symbols-rounded {
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.categoria-opcao.active .material-symbols-rounded {
+  color: #fff;
+}
+
+.perguntas-opcao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.perguntas-opcao .config-btn {
+  flex: 1 1 60px;
+}

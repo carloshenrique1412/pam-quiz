@@ -1,0 +1,132 @@
+#tela-revisao {
+  width: 580px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+#tela-revisao::before {
+  content: "★ REVISÃO DE RESPOSTAS ★";
+  display: block;
+  font-size: .4rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin: 20px 0 0;
+  opacity: .7;
+  text-align: center;
+}
+
+/* ── Header da revisão ── */
+.revisao-header {
+  padding: 20px 24px 16px;
+  text-align: center;
+  border-bottom: 3px solid var(--border);
+  background: var(--bg-panel2);
+}
+
+.revisao-titulo {
+  font-size: .7rem;
+  color: var(--gold);
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 8px;
+}
+
+.revisao-placar {
+  font-size: .5rem;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+.revisao-placar b {
+  color: var(--accent-bright);
+}
+
+/* ── Lista de itens ── */
+.revisao-lista {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.revisao-item {
+  background: var(--bg-panel2);
+  border: 2px solid var(--border);
+  padding: 16px;
+}
+
+.revisao-item.acertou {
+  border-color: var(--green);
+}
+
+.revisao-item.errou {
+  border-color: var(--red);
+}
+
+.revisao-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.revisao-num {
+  font-size: .4rem;
+  color: var(--accent);
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.revisao-pergunta {
+  font-size: .45rem;
+  color: var(--text-main);
+  line-height: 2;
+}
+
+/* ── Opções de resposta ── */
+.revisao-respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.revisao-resp {
+  padding: 8px 12px;
+  font-size: .4rem;
+  line-height: 1.8;
+  border: 1px solid var(--border);
+}
+
+.revisao-resp.correta {
+  background: #0d2b1a;
+  border-color: var(--green);
+  color: #55e87a;
+}
+
+.revisao-resp.errada {
+  background: #2b0d0d;
+  border-color: var(--red);
+  color: #e87a7a;
+}
+
+.revisao-resp.neutra {
+  color: var(--text-dim);
+  background: transparent;
+}
+
+.revisao-resp-label {
+  font-size: .35rem;
+  margin-right: 6px;
+  opacity: .7;
+}
+
+/* ── Rodapé da revisão ── */
+.revisao-footer {
+  padding: 20px 24px;
+  border-top: 3px solid var(--border);
+  background: var(--bg-panel2);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

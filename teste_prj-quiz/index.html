@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz RPG</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./src/css/button.css">
+    <link rel="stylesheet" href="./src/css/print.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/tela-intro.css">
+    <link rel="stylesheet" href="./src/css/tela-quiz.css">
+    <link rel="stylesheet" href="./src/css/tela-revisao.css">
+    <link rel="stylesheet" href="./src/css/tela-resultado.css">
+</head>
+
+<body>
+
+    <!-- TELA 1: INTRODUÇÃO -->
+    <div id="tela1" class="screen active">
+        <h2 class="t1-titulo">⚔ Quiz RPG<br>Battle</h2>
+        <p class="t1-subtitulo">Teste seus conhecimentos de Hardware & Programação</p>
+        <p class="t1-desc">
+            Neste quiz você será desafiado em 4 áreas do conhecimento tecnológico.
+            Responda as questões dentro do tempo limite de 15 segundos cada.<br><br>
+            Ao final, você poderá confirmar todas as suas respostas antes de ver o resultado!
+        </p>
+        <div class="t1-categorias">
+            <button class="t1-cat" data-cat="HTML &amp; CSS">
+                <span class="material-symbols-rounded">code</span>
+                <span>HTML &amp; CSS</span>
+            </button>
+            <button class="t1-cat" data-cat="Lógica de Programação">
+                <span class="material-symbols-rounded">psychology</span>
+                <span>Lógica</span>
+            </button>
+            <button class="t1-cat" data-cat="Componentes do PC">
+                <span class="material-symbols-rounded">memory</span>
+                <span>Hardware</span>
+            </button>
+            <button class="t1-cat" data-cat="Periféricos">
+                <span class="material-symbols-rounded">mouse</span>
+                <span>Periféricos</span>
+            </button>
+        </div>
+        <button class="btn-gold" onclick="iniciarQuiz()">▶ Começar</button>
+    </div>
+
+    <!-- TELAS 2–6: PERGUNTAS (geradas dinamicamente) -->
+    <div id="pergunta-screen" class="screen">
+        <header class="quiz-header">
+            <h2 class="quiz-titulo">⚔ Quiz Battle</h2>
+            <div class="quiz-tempo">
+                <span class="material-symbols-rounded">timer</span>
+                <p class="tempo-duracao">15s</p>
+            </div>
+        </header>
+
+        <div class="quiz-progress">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+            </div>
+            <p class="progress-label">
+                <b id="prog-atual">1</b> de <b id="prog-total">5</b>
+            </p>
+        </div>
+
+        <div class="quiz-content">
+            <h1 class="pergunta-texto" id="pergunta-texto"></h1>
+            <ul class="answer-opcoes" id="answer-opcoes"></ul>
+        </div>
+
+        <div class="quiz-footer">
+            <p class="pergunta-status" id="pergunta-status"></p>
+            <button class="btn-next" id="btn-next" onclick="proximaPergunta()">
+                Next
+                <span class="material-symbols-rounded">arrow_right_alt</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- TELA 7: REVISÃO DAS RESPOSTAS -->
+    <div id="tela-revisao" class="screen">
+        <div class="revisao-header">
+            <h2 class="revisao-titulo">📋 Confirme suas Respostas</h2>
+            <p class="revisao-placar" id="revisao-placar"></p>
+        </div>
+        <div class="revisao-lista" id="revisao-lista"></div>
+        <div class="revisao-footer">
+            <button class="btn-gold" onclick="irParaResultado()">Ver Resultado ▶</button>
+        </div>
+    </div>
+
+    <!-- TELA RESULTADO FINAL -->
+    <div id="tela-resultado" class="screen">
+        <img src="./src/img/quiz.png" class="resultado-img" alt="Mascote">
+        <h2 class="resultado-titulo">Quest<br>Completa!</h2>
+        <p class="resultado-mensagem" id="resultado-mensagem"></p>
+        <div class="resultado-btns">
+            <button class="btn-gold" onclick="reiniciar()">↺ Jogar Denovo</button>
+        </div>
+    </div>
+
+    <script src="./src/js/script.js" type="module"></script>
+</body>
+
+</html>

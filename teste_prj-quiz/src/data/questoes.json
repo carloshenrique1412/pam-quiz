@@ -1,0 +1,410 @@
+{
+  "HTML & CSS": [
+    {
+      "questao": "O que significa HTML?",
+      "opcoes": [
+        "Hyper Text Pre Processor",
+        "Hyper Text Markup Language",
+        "Hyper Text Multiple Language",
+        "Hyper Tool Multi Language"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual tag é usada para criar um parágrafo em HTML?",
+      "opcoes": [
+        "<div>",
+        "<span>",
+        "<p>",
+        "<paragraph>"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "Qual tag cria o maior título em HTML?",
+      "opcoes": [
+        "<h6>",
+        "<heading>",
+        "<title>",
+        "<h1>"
+      ],
+      "respostaCorreta": 3
+    },
+    {
+      "questao": "Qual atributo define o endereço de um link?",
+      "opcoes": [
+        "src",
+        "href",
+        "link",
+        "url"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual tag insere uma imagem em HTML?",
+      "opcoes": [
+        "<image>",
+        "<picture>",
+        "<img>",
+        "<src>"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "Qual propriedade CSS muda a cor do texto?",
+      "opcoes": [
+        "text-color",
+        "font-color",
+        "color",
+        "foreground-color"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "Qual propriedade CSS muda a cor de fundo?",
+      "opcoes": [
+        "color",
+        "background-color",
+        "bg-color",
+        "back-color"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual tag cria uma lista não ordenada?",
+      "opcoes": [
+        "<ol>",
+        "<list>",
+        "<ul>",
+        "<li>"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "Qual seletor CSS seleciona um elemento pelo ID?",
+      "opcoes": [
+        ".elemento",
+        "#elemento",
+        "*elemento",
+        "@elemento"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual propriedade CSS arredonda bordas?",
+      "opcoes": [
+        "border-round",
+        "border-curve",
+        "border-radius",
+        "corner-radius"
+      ],
+      "respostaCorreta": 2
+    }
+  ],
+  "Lógica de Programação": [
+    {
+      "questao": "O que é uma variável em programação?",
+      "opcoes": [
+        "Um valor fixo que nunca muda",
+        "Um espaço na memória para armazenar dados",
+        "Um comando que executa ações",
+        "Um tipo de loop"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que faz uma estrutura 'if'?",
+      "opcoes": [
+        "Repete um bloco de código",
+        "Armazena um valor",
+        "Executa um bloco se uma condição for verdadeira",
+        "Define uma função"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O que é um loop 'for'?",
+      "opcoes": [
+        "Uma condição que verifica valores",
+        "Uma estrutura que repete código um número definido de vezes",
+        "Uma função que retorna um valor",
+        "Um tipo de variável"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que significa 'algoritmo'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um erro no código",
+        "Uma sequência de passos para resolver um problema",
+        "Um banco de dados"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O que é uma função em programação?",
+      "opcoes": [
+        "Um tipo de variável",
+        "Um bloco de código reutilizável que realiza uma tarefa",
+        "Um operador matemático",
+        "Um tipo de loop"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual operador verifica igualdade em muitas linguagens?",
+      "opcoes": [
+        "=",
+        "=>",
+        "==",
+        "!="
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O que é um array?",
+      "opcoes": [
+        "Uma variável que guarda um único valor",
+        "Uma coleção de valores em uma única variável",
+        "Um tipo de condição",
+        "Um operador lógico"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é um 'bug'?",
+      "opcoes": [
+        "Um tipo de variável",
+        "Uma funcionalidade do programa",
+        "Um erro que causa comportamento inesperado",
+        "Um arquivo de configuração"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O que significa 'booleano'?",
+      "opcoes": [
+        "Um número decimal",
+        "Um texto longo",
+        "Um valor que pode ser verdadeiro ou falso",
+        "Uma lista de valores"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "Qual é o primeiro índice de um array na maioria das linguagens?",
+      "opcoes": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "respostaCorreta": 2
+    }
+  ],
+  "Componentes do PC": [
+    {
+      "questao": "O que é a CPU?",
+      "opcoes": [
+        "Memória do computador",
+        "Unidade Central de Processamento, o 'cérebro' do PC",
+        "Placa de vídeo",
+        "Fonte de alimentação"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é a RAM?",
+      "opcoes": [
+        "Um tipo de armazenamento permanente",
+        "Memória de acesso aleatório para dados temporários",
+        "A placa-mãe do computador",
+        "Um tipo de processador"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual é a função da placa-mãe?",
+      "opcoes": [
+        "Processar gráficos",
+        "Armazenar dados permanentemente",
+        "Conectar e integrar todos os componentes do PC",
+        "Fornecer energia"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O que é um SSD?",
+      "opcoes": [
+        "Um tipo de memória RAM",
+        "Solid State Drive, armazenamento sem partes móveis",
+        "Um processador de alta velocidade",
+        "Um tipo de placa de vídeo"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual é a função da fonte de alimentação (PSU)?",
+      "opcoes": [
+        "Processar dados",
+        "Armazenar arquivos",
+        "Converter e fornecer energia aos componentes",
+        "Conectar periféricos"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O que é a GPU?",
+      "opcoes": [
+        "Unidade de processamento gráfico responsável por renderizar imagens",
+        "Memória de vídeo",
+        "Tipo de armazenamento",
+        "Controlador de entrada e saída"
+      ],
+      "respostaCorreta": 0
+    },
+    {
+      "questao": "O que é um HD (Hard Disk)?",
+      "opcoes": [
+        "Memória temporária",
+        "Armazenamento permanente com discos magnéticos giratórios",
+        "Tipo de processador",
+        "Placa de rede"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é o BIOS?",
+      "opcoes": [
+        "Um sistema operacional",
+        "Software básico que inicializa o hardware ao ligar o PC",
+        "Um tipo de memória RAM",
+        "Um driver de vídeo"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "Qual a diferença principal entre SSD e HD?",
+      "opcoes": [
+        "O SSD usa discos magnéticos e o HD usa memória flash",
+        "O SSD usa memória flash e é mais rápido; o HD usa discos giratórios",
+        "Não há diferença",
+        "O HD é mais rápido que o SSD"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é pasta térmica?",
+      "opcoes": [
+        "Um tipo de memória RAM",
+        "Substância que melhora a transferência de calor entre CPU e cooler",
+        "Um tipo de fonte de alimentação",
+        "Um adesivo para fixar componentes"
+      ],
+      "respostaCorreta": 1
+    }
+  ],
+  "Periféricos": [
+    {
+      "questao": "O que é um periférico?",
+      "opcoes": [
+        "Um componente interno do computador",
+        "Dispositivo externo para entrada ou saída de dados",
+        "Um tipo de processador",
+        "Um sistema operacional"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O teclado é um dispositivo de:",
+      "opcoes": [
+        "Saída",
+        "Entrada e saída",
+        "Entrada",
+        "Armazenamento"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "O monitor é um dispositivo de:",
+      "opcoes": [
+        "Entrada",
+        "Armazenamento",
+        "Entrada e saída",
+        "Saída"
+      ],
+      "respostaCorreta": 3
+    },
+    {
+      "questao": "O mouse é um dispositivo de:",
+      "opcoes": [
+        "Saída",
+        "Armazenamento",
+        "Entrada",
+        "Entrada e saída"
+      ],
+      "respostaCorreta": 2
+    },
+    {
+      "questao": "A impressora é um dispositivo de:",
+      "opcoes": [
+        "Entrada",
+        "Saída",
+        "Entrada e saída",
+        "Armazenamento"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é um scanner?",
+      "opcoes": [
+        "Dispositivo de saída para imprimir",
+        "Dispositivo de entrada que digitaliza documentos físicos",
+        "Um tipo de teclado",
+        "Um dispositivo de armazenamento"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é um pen drive?",
+      "opcoes": [
+        "Um tipo de impressora",
+        "Dispositivo de armazenamento portátil via USB",
+        "Um tipo de teclado sem fio",
+        "Um dispositivo de entrada de áudio"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é DPI em um mouse?",
+      "opcoes": [
+        "Tipo de conexão do mouse",
+        "Pontos por polegada, mede a sensibilidade",
+        "Velocidade máxima do cursor",
+        "Quantidade de botões"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é Bluetooth em periféricos?",
+      "opcoes": [
+        "Um tipo de cabo",
+        "Tecnologia de comunicação sem fio de curto alcance",
+        "Um tipo de porta USB",
+        "Um protocolo de internet"
+      ],
+      "respostaCorreta": 1
+    },
+    {
+      "questao": "O que é um hub USB?",
+      "opcoes": [
+        "Um tipo de pen drive",
+        "Dispositivo que expande a quantidade de portas USB",
+        "Um tipo de impressora",
+        "Um controlador de rede"
+      ],
+      "respostaCorreta": 1
+    }
+  ]
+}
