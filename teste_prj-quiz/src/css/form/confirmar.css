@@ -1,0 +1,103 @@
+
+
+/* ── layout geral da tela ── */
+.confirmar-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 40px 44px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── header ── */
+.confirmar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 20px;
+}
+
+/* ── bloco de prévia do JSON ── */
+.json-preview-wrapper {
+  background: var(--bg-deep);
+  border: 2px solid var(--border);
+  box-shadow: inset 2px 2px 0 #0008;
+  padding: 16px 20px;
+}
+
+.json-label {
+  font-size: .38rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.json-preview {
+  font-family: "Press Start 2P", monospace;
+  font-size: .4rem;
+  color: var(--gold);
+  line-height: 2.2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* ── grid de campos editáveis (2 colunas) ── */
+.confirmar-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+}
+
+/* ── rodapé com botões ── */
+.confirmar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 2px solid var(--border);
+  gap: 16px;
+}
+
+/* ── toast de sucesso ── */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--green);
+  color: #fff;
+  font-size: .5rem;
+  letter-spacing: 1px;
+  padding: 14px 28px;
+  border: 2px solid #1e8449;
+  box-shadow: 4px 4px 0 #000;
+  opacity: 0;
+  transition: transform .25s, opacity .25s;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── responsivo ── */
+@media (max-width: 560px) {
+  .confirmar-layout {
+    padding: 28px 20px;
+  }
+  .confirmar-fields {
+    grid-template-columns: 1fr;
+  }
+  .confirmar-footer {
+    flex-direction: column-reverse;
+  }
+  .confirmar-footer .btn-gold,
+  .confirmar-footer .btn-print {
+    width: 100%;
+    text-align: center;
+  }
+}

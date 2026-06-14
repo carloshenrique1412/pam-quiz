@@ -1,0 +1,85 @@
+/* ── inputs.css — campos, labels, selects, erros ── */
+
+/* ── grupo (label + input + erro) ── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── label ── */
+.field-label {
+  font-size: .45rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── input de texto / email ── */
+.field-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: "Press Start 2P", monospace;
+  font-size: .5rem;
+  color: var(--text-main);
+  background: var(--bg-deep);
+  border: 2px solid var(--border);
+  outline: none;
+  transition: border-color .1s, box-shadow .1s;
+  box-shadow: inset 2px 2px 0 #0006;
+  letter-spacing: 1px;
+}
+
+.field-input::placeholder {
+  color: var(--text-dim);
+  opacity: .6;
+}
+
+.field-input:focus {
+  border-color: var(--accent);
+  box-shadow: inset 2px 2px 0 #0006, 0 0 0 2px var(--accent-bright)44;
+}
+
+/* estado de erro */
+.field-input.error {
+  border-color: var(--red);
+  box-shadow: inset 2px 2px 0 #0006, 0 0 0 2px #c0392b44;
+}
+
+/* ── select ── */
+.select-wrapper {
+  position: relative;
+}
+
+/* seta pixel customizada */
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .5rem;
+  color: var(--accent);
+  pointer-events: none;
+}
+
+.field-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 36px; /* espaço para a seta */
+}
+
+.field-select option {
+  background: var(--bg-panel2);
+  color: var(--text-main);
+  font-size: .45rem;
+}
+
+/* ── mensagem de erro inline ── */
+.field-error {
+  font-size: .38rem;
+  color: var(--red);
+  min-height: 1em;
+  letter-spacing: 1px;
+}

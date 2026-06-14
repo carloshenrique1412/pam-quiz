@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmar Cadastro</title>
+     <link rel="icon" type="image/png" href="./src/img/favicon-computer.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
+    <link rel="stylesheet" href="./src/css/form/form.css" />
+    <link rel="stylesheet" href="./src/css/form/inputs.css" />
+    <link rel="stylesheet" href="./src/css/form/buttonForm.css" />
+    <link rel="stylesheet" href="./src/css/form/confirmar.css" />
+</head>
+
+<body>
+
+    <div class="screen active" id="screen-confirmar">
+
+        <div class="confirmar-layout">
+
+            <div class="confirmar-header">
+                <h1 class="form-title">Confirmar Dados</h1>
+                <p class="form-subtitle">Revise e edite se necessário</p>
+            </div>
+
+            <pre class="json-preview"></pre>
+
+            <!-- Campos editáveis -->
+            <div class="confirmar-fields">
+
+                <div class="field-group">
+                    <label class="field-label" for="conf-nome">Nome</label>
+                    <input class="field-input" type="text" id="conf-nome" name="nome" />
+                    <span class="field-error" id="conf-erro-nome"></span>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="conf-email">E-mail</label>
+                    <input class="field-input" type="email" id="conf-email" name="email" />
+                    <span class="field-error" id="conf-erro-email"></span>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="conf-estado">Estado</label>
+                    <div class="select-wrapper">
+                        <select class="field-input field-select" id="conf-estado" name="estado">
+                            <option value="">— selecione —</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <span class="field-error" id="conf-erro-estado"></span>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="conf-sexo">Sexo</label>
+                    <div class="select-wrapper">
+                        <select class="field-input field-select" id="conf-sexo" name="sexo">
+                            <option value="">— selecione —</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <span class="field-error" id="conf-erro-sexo"></span>
+                </div>
+
+            </div>
+
+            <!-- Rodapé com botões -->
+            <div class="confirmar-footer">
+                <button class="btn-print" id="btn-voltar" type="button">
+                    Voltar
+                </button>
+                <button class="btn-gold" id="btn-confirmar" type="button">
+                    Confirmar 
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Toast de sucesso -->
+        <div class="toast" id="toast">✔ Cadastro confirmado!</div>
+
+    </div>
+
+    <script src="./src/js/Form/script2.js"></script>
+</body>
+
+</html>

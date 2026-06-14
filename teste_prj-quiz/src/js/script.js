@@ -9,8 +9,8 @@ function _msgResultado() {
   const pct = (estado.acertos / estado.totalSelecionado) * 100;
   const msg = pct === 100 ? "Perfeito! Você acertou tudo!"
     : pct >= 70 ? "Ótimo esforço! Continue assim!"
-    : pct >= 40 ? "Bom começo! Pratique mais um pouco."
-    : "Não desanime! Tente novamente.";
+      : pct >= 40 ? "Bom começo! Pratique mais um pouco."
+        : "Não desanime! Tente novamente.";
   document.getElementById("resultado-mensagem").innerHTML =
     `Você respondeu <b>${estado.acertos}</b> de <b>${estado.totalSelecionado}</b> perguntas corretamente. ${msg}`;
 }
@@ -64,16 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.proximaPergunta = proximaPergunta;
   window.irParaResultado = function () { _msgResultado(); irParaTela("tela-resultado"); };
-  window.irParaRevisao   = function () { preencherRevisao(); irParaTela("tela-revisao"); };
-  window.reiniciar       = function () { limpar(); location.reload(); };
+  window.irParaRevisao = function () { preencherRevisao(); irParaTela("tela-revisao"); };
+  window.reiniciar = function () { limpar(); sessionStorage.clear(); location.href = 'formInicio.html'; };
 
   // ── Restaura sessão ao recarregar ──────────────────
   const tela = estado.telaAtual;
   if (tela && tela !== "tela1") {
     document.getElementById("tela1").classList.remove("active");
     document.getElementById(tela).classList.add("active");
-    if (tela === "pergunta-screen")   { renderizarQuestao(); iniciarTimer(); }
-    else if (tela === "tela-revisao")   preencherRevisao();
+    if (tela === "pergunta-screen") { renderizarQuestao(); iniciarTimer(); }
+    else if (tela === "tela-revisao") preencherRevisao();
     else if (tela === "tela-resultado") _msgResultado();
   }
 });

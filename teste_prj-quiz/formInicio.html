@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+     <link rel="icon" type="image/png" href="./src/img/favicon-computer.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
+    <link rel="stylesheet" href="./src/css/form/form.css" />
+    <link rel="stylesheet" href="./src/css/form/inputs.css" />
+    <link rel="stylesheet" href="./src/css/form/buttonForm.css" />
+    <link rel="stylesheet" href="./src/css/form/mascote.css" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+    <div class="screen active" id="screen-form">
+
+        <div class="form-layout">
+
+            <!-- Lado esquerdo: mascote 3D -->
+            <div class="mascot-side">
+                <div class="mascot-wrapper">
+                    <model-viewer src="computer.glb" auto-rotate camera-controls class="mascot-3d">
+                    </model-viewer>
+                </div>
+            </div>
+
+            <!-- Lado direito: formulário -->
+            <div class="form-side">
+                <h1 class="form-title">Cadastro</h1>
+                <p class="form-subtitle">Preencha seus dados para começar</p>
+
+                <div class="form-body">
+
+                    <div class="field-group">
+                        <label class="field-label" for="nome">Nome</label>
+                        <input class="field-input" type="text" id="nome" name="nome"
+                            placeholder="Digite seu nome completo" autocomplete="name" />
+                        <span class="field-error" id="erro-nome"></span>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="email">E-mail</label>
+                        <input class="field-input" type="email" id="email" name="email" placeholder="seu@email.com"
+                            autocomplete="email" />
+                        <span class="field-error" id="erro-email"></span>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="estado">Estado</label>
+                        <div class="select-wrapper">
+                            <select class="field-input field-select" id="estado" name="estado">
+                                <option value="">— selecione —</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <span class="field-error" id="erro-estado"></span>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="sexo">Sexo</label>
+                        <div class="select-wrapper">
+                            <select class="field-input field-select" id="sexo" name="sexo">
+                                <option value="">— selecione —</option>
+                                <option value="M">M</option>
+                                <option value="F">F</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <span class="field-error" id="erro-sexo"></span>
+                    </div>
+
+                    <button class="btn-gold" id="btn-enviar" type="button">
+                        Avançar ▶
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./src/js/Form/script1.js"></script>
+</body>
+
+</html>|
