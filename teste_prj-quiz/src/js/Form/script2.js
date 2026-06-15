@@ -5,6 +5,7 @@ document.querySelector('[name="email"]').value = pessoa.email
 document.querySelector('[name="estado"]').value = pessoa.estado
 document.querySelector('[name="sexo"]').value = pessoa.sexo
 
+
 document.querySelectorAll('input, select').forEach(campo => {
     campo.addEventListener('input', () => {
         pessoa[campo.name] = campo.value
@@ -13,10 +14,12 @@ document.querySelectorAll('input, select').forEach(campo => {
     })
 })
 
+
 function atualizarJSON() {
     document.querySelector('.json-preview').textContent =
         JSON.stringify(JSON.parse(sessionStorage.pessoa), null, 2)
 }
+
 
 atualizarJSON()
 
@@ -25,6 +28,7 @@ document.querySelector('#btn-confirmar').addEventListener('click', () => {
     sessionStorage.setItem('cadastroConfirmado', 'true')
     window.location.href = 'index.html'
 })
+
 
 // Voltar
 document.querySelector('#btn-voltar').addEventListener('click', () => {

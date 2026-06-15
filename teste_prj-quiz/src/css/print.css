@@ -1,38 +1,86 @@
 @media print {
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
   body {
-    background: #fff;
-    display: block;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+    margin: 0;
+    padding: 0;
   }
 
   body::before {
-    display: none;
+    display: none !important;
   }
 
+  /* Esconde todas as telas */
+  .screen {
+    display: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Mostra somente a revisão */
   #tela-revisao {
     display: block !important;
-    max-height: none;
-    overflow: visible;
-    background: #fff;
-    border: none;
-    box-shadow: none;
-    width: 100%;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #tela-revisao::before {
+    color: #000 !important;
+  }
+
+  .revisao-lista {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .revisao-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 12px;
+  }
+
+  .revisao-header,
+  .revisao-item,
+  .revisao-footer {
+    background: #fff !important;
   }
 
   #tela-revisao * {
     color: #000 !important;
-    background: #fff !important;
-    border-color: #ccc !important;
+    border-color: #999 !important;
   }
 
-  .revisao-item.acertou .revisao-resp.correta {
-    background: #e8ffe8 !important;
+  .revisao-resp.correta {
+    background: #dff5df !important;
   }
 
-  .revisao-item.errou .revisao-resp.errada {
-    background: #ffe8e8 !important;
+  .revisao-resp.errada {
+    background: #f8dcdc !important;
   }
 
-  .screen:not(#tela-revisao) {
+  .revisao-footer,
+  .btn-print,
+  .btn-gold {
     display: none !important;
   }
 }
