@@ -63,7 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.proximaPergunta = proximaPergunta;
-  window.irParaResultado = function () { _msgResultado(); irParaTela("tela-resultado"); };
+ window.irParaResultado = function () {
+  _msgResultado();
+  mostrarDadosUsuario();
+  irParaTela("tela-resultado");
+};
   window.irParaRevisao = function () { preencherRevisao(); irParaTela("tela-revisao"); };
   window.reiniciar = function () { limpar(); sessionStorage.clear(); location.href = 'formInicio.html'; };
 
@@ -77,3 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (tela === "tela-resultado") _msgResultado();
   }
 });
+
+function mostrarDadosUsuario() {
+  const p = JSON.parse(sessionStorage.getItem('pessoa'));
+  if (!p) return;
+
+  document.getElementById('dados-usuario').innerHTML = `
+    <div class="dados-box">
+      <p>Nome: ${p.nome}</p>
+      <p>Email: ${p.email}</p>
+      <p>Estado: ${p.estado}</p>
+      <p>Sexo: ${p.sexo}</p>
+    </div>
+  `;
+}
+
