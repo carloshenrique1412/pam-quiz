@@ -95,3 +95,20 @@
   flex-wrap: wrap;
   margin-top: 28px;
 }
+
+
+#dados-usuario {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dados-box {
+  color: #fff;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
