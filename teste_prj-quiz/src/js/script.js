@@ -1,5 +1,7 @@
 // script.js
 import { estado, irParaTela, salvar, limpar } from './estado.js';
+
+import { enviarDadosBackend } from './passandoDados.js';
 import { iniciarTimer, renderizarQuestao, proximaPergunta } from './jogo.js';
 
 const TOTAL = 5;
@@ -13,6 +15,8 @@ function _msgResultado() {
         : "Não desanime! Tente novamente.";
   document.getElementById("resultado-mensagem").innerHTML =
     `Você respondeu <b>${estado.acertos}</b> de <b>${estado.totalSelecionado}</b> perguntas corretamente. ${msg}`;
+
+    enviarDadosBackend(); // Chama a função para enviar os dados ao backend
 }
 
 function escaparHTML(str) {
