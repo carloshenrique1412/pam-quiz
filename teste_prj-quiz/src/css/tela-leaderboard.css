@@ -41,7 +41,7 @@
 .lb-colunas,
 .lb-linha {
   display: grid;
-  grid-template-columns: 64px 1fr 80px;
+  grid-template-columns: 64px 1fr 72px 76px;
   align-items: center;
   gap: 12px;
 }
@@ -54,8 +54,12 @@
   letter-spacing: 1px;
 }
 
-.lb-colunas span:last-child {
+.lb-colunas span:nth-child(3) {
   text-align: right;
+}
+
+.lb-colunas span:last-child {
+  text-align: center;
 }
 
 /* ── Lista ── */
@@ -148,4 +152,98 @@
   background: var(--bg-panel2);
   display: flex;
   justify-content: center;
+}
+
+/* ── Ações (editar / excluir) ── */
+.lb-acoes {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.lb-btn {
+  padding: 6px 8px;
+  font-family: "Press Start 2P", monospace;
+  font-size: .5rem;
+  line-height: 1;
+  color: var(--text-main);
+  background: var(--bg-deep);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--border);
+  transition: all .1s;
+}
+
+.lb-btn:hover {
+  background: var(--border);
+  transform: translate(-1px, -1px);
+}
+
+.lb-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--border);
+}
+
+.lb-btn:disabled {
+  opacity: .5;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.lb-btn.perigo:hover {
+  background: #2b0d0d;
+  border-color: var(--red);
+  box-shadow: 2px 2px 0 #7a1010;
+}
+
+.lb-btn.ok {
+  color: #55e87a;
+  border-color: var(--green);
+  box-shadow: 2px 2px 0 #0a5c30;
+}
+
+.lb-btn.ok:hover {
+  background: #0d2b1a;
+}
+
+/* ── Modo edição (inputs iguais aos do cadastro) ── */
+.lb-linha.editando {
+  border-color: var(--accent);
+  box-shadow: 3px 3px 0 var(--accent);
+}
+
+.lb-linha .field-input {
+  padding: 8px 10px;
+  font-size: .45rem;
+}
+
+.lb-linha .lb-input-acertos {
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* ── Telas pequenas ── */
+@media (max-width: 560px) {
+  .lb-colunas,
+  .lb-linha {
+    grid-template-columns: 36px 1fr 44px 64px;
+    gap: 8px;
+  }
+
+  .lb-colunas {
+    padding: 12px 24px 0;
+  }
+
+  .lb-lista {
+    padding: 12px 12px 20px;
+  }
+
+  .lb-linha {
+    padding: 12px 10px;
+  }
+
+  .lb-btn {
+    padding: 6px;
+  }
 }
