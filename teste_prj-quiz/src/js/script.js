@@ -15,8 +15,6 @@ function _msgResultado() {
         : "Não desanime! Tente novamente.";
   document.getElementById("resultado-mensagem").innerHTML =
     `Você respondeu <b>${estado.acertos}</b> de <b>${estado.totalSelecionado}</b> perguntas corretamente. ${msg}`;
-
-    enviarDadosBackend(); // Chama a função para enviar os dados ao backend
 }
 
 function escaparHTML(str) {
@@ -69,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.proximaPergunta = proximaPergunta;
  window.irParaResultado = function () {
   _msgResultado();
+  enviarDadosBackend(); // envia ao backend uma única vez, ao ver o resultado
   mostrarDadosUsuario();
   irParaTela("tela-resultado");
 };

@@ -1,0 +1,151 @@
+#tela-leaderboard {
+  width: 520px;
+  max-width: 100%;
+}
+
+#tela-leaderboard::before {
+  content: "★ HALL OF FAME ★";
+  display: block;
+  font-size: .4rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin: 20px 0 0;
+  opacity: .7;
+  text-align: center;
+}
+
+/* ── Header ── */
+.lb-header {
+  padding: 20px 24px 16px;
+  text-align: center;
+  border-bottom: 3px solid var(--border);
+  background: var(--bg-panel2);
+}
+
+.lb-titulo {
+  font-size: .8rem;
+  color: var(--gold);
+  text-shadow: 2px 2px 0 #000, 0 0 20px #f0c06066;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.lb-subtitulo {
+  font-size: .4rem;
+  color: var(--text-dim);
+  line-height: 2;
+}
+
+/* ── Cabeçalho das colunas ── */
+.lb-colunas,
+.lb-linha {
+  display: grid;
+  grid-template-columns: 64px 1fr 80px;
+  align-items: center;
+  gap: 12px;
+}
+
+.lb-colunas {
+  padding: 12px 40px 0 40px;
+  font-size: .35rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lb-colunas span:last-child {
+  text-align: right;
+}
+
+/* ── Lista ── */
+.lb-lista {
+  list-style: none;
+  padding: 12px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.lb-lista:empty {
+  display: none;
+}
+
+.lb-linha {
+  padding: 14px 16px;
+  background: var(--bg-panel2);
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.lb-pos {
+  font-size: .5rem;
+  color: var(--accent);
+}
+
+.lb-nome {
+  font-size: .45rem;
+  color: var(--text-main);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.lb-acertos {
+  font-size: .6rem;
+  color: var(--accent-bright);
+  text-align: right;
+}
+
+/* ── Top 3 ── */
+.lb-linha.top1 {
+  border-color: var(--gold);
+  box-shadow: 3px 3px 0 #7a5a00;
+}
+
+.lb-linha.top1 .lb-nome,
+.lb-linha.top1 .lb-acertos {
+  color: var(--gold);
+  text-shadow: 1px 1px 0 #000;
+}
+
+.lb-linha.top2 {
+  border-color: var(--accent-bright);
+}
+
+.lb-linha.top3 {
+  border-color: var(--border-light);
+}
+
+.lb-linha.top1 .lb-pos,
+.lb-linha.top2 .lb-pos,
+.lb-linha.top3 .lb-pos {
+  font-size: .8rem;
+}
+
+/* ── Mensagens (carregando / vazio / erro) ── */
+.lb-status {
+  padding: 28px 24px;
+  text-align: center;
+  font-size: .45rem;
+  line-height: 2.5;
+  color: var(--text-dim);
+}
+
+.lb-status:empty {
+  display: none;
+}
+
+.lb-status.erro {
+  color: #e87a7a;
+}
+
+/* ── Rodapé ── */
+.lb-footer {
+  padding: 20px 24px;
+  border-top: 3px solid var(--border);
+  background: var(--bg-panel2);
+  display: flex;
+  justify-content: center;
+}

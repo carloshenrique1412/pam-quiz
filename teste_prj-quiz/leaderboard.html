@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Quiz RPG</title>
+    <link rel="icon" type="image/png" href="./src/img/favicon-computer.png" />
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/button.css">
+    <link rel="stylesheet" href="./src/css/tela-leaderboard.css">
+</head>
+
+<body>
+
+    <!-- TELA: RANKING -->
+    <div id="tela-leaderboard" class="screen active">
+        <div class="lb-header">
+            <h2 class="lb-titulo">🏆 Ranking</h2>
+            <p class="lb-subtitulo">Os melhores aventureiros do Quiz Battle</p>
+        </div>
+
+        <div class="lb-colunas">
+            <span>Pos.</span>
+            <span>Jogador</span>
+            <span>Acertos</span>
+        </div>
+
+        <ol class="lb-lista" id="lb-lista"></ol>
+        <p class="lb-status" id="lb-status">Carregando ranking...</p>
+
+        <div class="lb-footer">
+            <button class="btn-gold" id="btn-voltar" type="button">◀ Voltar</button>
+        </div>
+    </div>
+
+    <script src="./src/js/leaderboard.js" type="module"></script>
+</body>
+
+</html>
